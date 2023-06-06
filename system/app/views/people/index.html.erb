@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Identificacion</th>
+      <th>First name</th>
+      <th>Second name</th>
+      <th>First last name</th>
+      <th>Second last name</th>
+      <th>Role</th>
+      <th>Document</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @people.each do |person| %>
+      <tr>
+        <td><%= person.id %></td>
+        <td><%= person.identificacion %></td>
+        <td><%= person.first_name %></td>
+        <td><%= person.second_name %></td>
+        <td><%= person.first_last_name %></td>
+        <td><%= person.second_last_name %></td>
+        <td><%= person.role.role_name %></td>
+        <td><%= person.document.document_type %></td>
+        <td><%= link_to 'Show', person %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
